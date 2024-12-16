@@ -117,6 +117,7 @@ def process_mol_file(
     if discard_coords:
         conf_xyz = get_conformers_as_tensor(mol, 1)[0]
     else:
+        Chem.rdDepictor.Compute2DCoords(mol)
         conf_xyz = np.array(mol.GetConformer().GetPositions())
     metadata, indexer, features = _process_molecule(
         mol, return_mol=False, ref_conf_xyz=conf_xyz, **kwargs

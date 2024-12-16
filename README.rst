@@ -2,7 +2,7 @@
 NeuralPLexer
 ============
 
-Official implementation of NeuralPLexer, a deep generative model to jointly predict protein-ligand complex 3D structures and beyond.
+FORK of NeuralPLexer, a deep generative model to jointly predict protein-ligand complex 3D structures and beyond.
 
 .. image:: docs/demo2_122023.gif
   :align: center
@@ -14,6 +14,11 @@ Reference
     Qiao Z, Nie W, Vahdat A, Miller III TF, Anandkumar A. State-specific protein-ligand complex structure prediction with a multi-scale deep generative model. *Nature Machine Intelligence*, 2024. https://doi.org/10.1038/s42256-024-00792-z.
 
 Pretrained model checkpoints described in the published manuscript, downstream evaluation datasets, and predicted structures are available at the following Zenodo repository for **non-commercial usage** under the CC BY-NC-SA 4.0 license: https://doi.org/10.5281/zenodo.10373581.
+
+Changes made
+------------
+Bugfix in data/pipeline.py line 120, Mol required to have 2d coords instatialized before getting conformers
+
 
 Installation
 ------------
